@@ -1,26 +1,14 @@
 import json
-import mysql.connector
 
-# Establish database connection
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="Pcane"
-)
-cursor = db.cursor()
-
-# Execute query to fetch tasks
-cursor.execute("SELECT * FROM tasks")
-tasks = cursor.fetchall()
+# Fetch tasks from local storage (assuming tasks are stored as JSON)
+tasks = json.loads(localStorage.getItem('tasks')) or []
 
 # Prepare tasks data as JSON
 tasks_data = []
 for task in tasks:
     tasks_data.append({
-        'id': task[0],
-        'title': task[1],
-        'description': task[2]
+        'title': task['title'],
+        'description': task['description']
     })
 
 # Send JSON response

@@ -1,89 +1,66 @@
 document.addEventListener('DOMContentLoaded', function() {
-    //modal handling here
-    var modal = document.getElementById('taskModal');
-    var addTaskBtn = document.getElementById('addTaskBtn');
-    //var closeBtn = document.getElementsByClassName('close')[0];
+    var taskList = JSON.parse(localStorage.getItem('tasks')) || [];
 
-    //open modal when add task button is clicked
-    addTaskBtn.onclick = function() {
-        modal.style.display = 'block';
+    // Function to render tasks
+    function renderTasks() {
+        var tasksHTML = '';
+        taskList.forEach(function(task, index) {
+            tasksHTML += `
+                <div class="task">
+                    <h3>${task.taskName}</h3>
+                    <p>${task.taskDescription}</p>
+                    <button class="deleteTaskBtn" data-index="${index}">Delete</button>
+                </div>
+            `;
+        });
+        document.getElementById('taskList').innerHTML = tasksHTML;
     }
-    
-    //close modal when button clicked
-    //closeBtn.onclick = function() {
-    //    modal.style.display = 'none';
-    //}
 
-    //close modal when clicking outside of it 
-    //window.onclick = function(event) {
-    //    if (event.target == modal) {
-    //        modal.style.display = 'none';
-    //    }
-   // }
+    // Initial rendering of tasks
+    renderTasks();
 
-    //form submission handling 
+    // Form submission handling
     document.getElementById('taskForm').addEventListener('submit', function(event) {
-        event.preventDefault(); //default shouldnt submit 
+        event.preventDefault();
 
-        //get form inputs
         var taskName = document.getElementById('taskName').value.trim();
-        var taskDescriprition = document.getElementById('taskDescription').value.trim();
+        var taskDescription = document.getElementById('taskDescription').value.trim();
         var taskPriority = document.getElementById('taskPriority').value;
         var dueDate = document.getElementById('dueDate').value;
         var taskStatus = document.getElementById('taskStatus').value;
 
-        // perform client-side validation
-        var errors = [];
-        if (taskName === '') {
-            errors.push('Task Name is required.');
-        }
-        if (taskDescriprition === '') {
-            errors.push('Task Description is required.');
-        }
-        if (dueDate === '') {
-            errors.push('Due Date is required.');
-        }
+        // Perform client-side validation
+        // (You can add your validation logic here)
 
-        // display validation errors if any
-        if (errors.length > 0) {
-             alert(errors.join('\n'));
-            return; // stop form submission if there are errors
-        }
+        // Create new task object
+        var newTask = {
+            taskName: taskName,
+            taskDescription: taskDescription,
+            taskPriority: taskPriority,
+            dueDate: dueDate,
+            taskStatus: taskStatus
+        };
 
-        
-        //submit task data to server (backensd fetch POST request to a backend endpoint)
-        fetch('/add_task_.py', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                taskName: taskName,
-                taskDescriprition: taskDescriprition,
-                taskPriority: taskPriority,
-                dueDate: dueDate,
-                taskStatus: taskStatus
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            //handle response from server
-            if (data.success) {
-                //if task adds succesfully, close modal and refresh task list
-                modal.style.display = 'none';
-                
-            } else {
-                //display error msg 
-                alert('failed to add task, try again.');
-            }
-        })
+        // Add new task to taskList
+        taskList.push(newTask);
 
-        .catch(error =>{
-            console.error('Error:', error);
-            //display error msg
-            alert('An error occured while proseccing your request, try later');
-        });
+        // Save updated taskList to local storage
+        localStorage.setItem('tasks', JSON.stringify(taskList));
 
+        // Render tasks again
+        renderTasks();
+
+        // Reset form
+        document.getElementById('taskForm').reset();
     });
 
+    // Task deletion handling
+    document.getElementById('taskList').addEventListener('click', function(event) {
+        if (event.target.classList.contains('deleteTaskBtn')) {
+            var index = event.target.dataset.index;
+            taskList.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(taskList));
+            renderTasks();
+        }
+    });
 });
