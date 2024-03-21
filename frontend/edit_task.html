@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\Arnold\alx_capstone_project\alx_capstone_project\images\logo.png" alt="logo">
+        </div>
+        <h1>Edit Task</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Back to Task List</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="editTaskForm">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" required>
+            <label for="taskDescription">Description:</label>
+            <textarea id="taskDescription" name="taskDescription"></textarea>
+            <label for="taskDueDate">Due Date:</label>
+            <input type="date" id="taskDueDate" name="taskDueDate">
+            <label for="taskPriority">Priority:</label>
+            <select id="taskPriority" name="taskPriority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <label for="taskStatus">Status:</label>
+            <select id="taskStatus" name="taskStatus">
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+            <label for="taskAssignee">Assignee:</label>
+            <input type="text" id="taskAssignee" name="taskAssignee">
+            <label for="taskAttachment">Attachment:</label>
+            <input type="file" id="taskAttachment" name="taskAttachment">
+            <label for="taskComments">Comments/Notes:</label>
+            <textarea id="taskComments" name="taskComments"></textarea>
+            <input type="hidden" id="taskId" name="taskId">
+            <input type="submit" id="submitEditTaskBtn" value="Save Changes">
+            <button type="button" id="deleteTaskBtn">Delete Task</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>PressCane limited</p>
+    </footer>
+
+    <script src="js/edit_task.js"></script>
+</body>
+</html>

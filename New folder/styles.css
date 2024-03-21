@@ -1,0 +1,136 @@
+body {
+    background-color: rgb(67, 67, 211);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+}
+
+form {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+    padding: 20px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.slideshow-container {
+    display: flex; 
+    flex-direction: left;
+    justify-content: left;
+    align-items: center; 
+    overflow-x: auto; 
+    max-width: 100%; 
+    margin: 20px auto;
+}
+
+.slideshow-container img {
+    flex: 0 0 auto;
+    width: 200px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.slideshow-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slideshow-text p {
+    margin-top: 20px;
+}
+
+#taskFilters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#taskFilters label {
+    margin-right: 10px;
+}
+
+#taskFilters select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Additional styles for task details */
+
+#taskModal label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#taskModal input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#taskModal select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

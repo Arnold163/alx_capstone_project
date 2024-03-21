@@ -1,0 +1,336 @@
+body {
+    background-color: rgb(67, 67, 211);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 0%;
+}
+
+.logo img {
+    width: 110px; /* Adjust the width as needed */
+    height: auto; /* This maintains the aspect ratio */
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+
+form {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+    padding: 20px;
+    width: 300px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.slideshow-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slideshow-text p {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Additional Styles */
+.custom-main {
+    /* Add custom styles for the main element */
+    padding: 0 2px; /* Adjust this as needed */
+}
+
+.custom-task-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.custom-task-filters select {
+    
+    margin: 0 10px;
+}
+
+.custom-task-list {
+    /* Add custom styles for the taskList div */
+    /* Add custom styles for the taskList div */
+    /* Add custom styles for the taskList div */
+}
+
+.custom-task-modal {
+    /* Adjust modal position */
+    top: 20%; /* Adjust this value as needed */
+
+    /* Add custom styles for the modal content */
+}
+
+.custom-task-modal .modal-content {
+    /* Customize modal content */
+    padding: 20px;
+}
+
+.custom-task-modal .modal-content label {
+    /* Customize labels */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.custom-task-modal .modal-content input[type="text"],
+.custom-task-modal .modal-content textarea,
+.custom-task-modal .modal-content select,
+.custom-task-modal .modal-content input[type="date"] {
+    /* Customize input fields */
+    width: 100%; /* Adjust this value as needed */
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.custom-task-modal .modal-content input[type="submit"] {
+    /* Customize submit button */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-task-modal .modal-content input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.custom-task-modal .close {
+    /* Customize close button */
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+body {
+    background-color: rgb(67, 67, 211);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 0%;
+}
+
+.logo img {
+    width: 110px; /* Adjust the width as needed */
+    height: auto; /* This maintains the aspect ratio */
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+
+form {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+    padding: 20px;
+    width: 300px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.slideshow-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slideshow-text p {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Additional Styles */
+.custom-main {
+    /* Add custom styles for the main element */
+    padding: 0 2px; /* Adjust this as needed */
+}
+
+.custom-task-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.custom-task-filters select {
+    margin: 0 10px;
+}
+
+.custom-task-list {
+    /* Add custom styles for the taskList div */
+    /* Add custom styles for the taskList div */
+    /* Add custom styles for the taskList div */
+}
+
+.custom-task-modal {
+    /* Adjust modal position */
+    top: 20%; /* Adjust this value as needed */
+
+    /* Add custom styles for the modal content */
+}
+
+.custom-task-modal .modal-content {
+    /* Customize modal content */
+    padding: 20px;
+}
+
+.custom-task-modal .modal-content label {
+    /* Customize labels */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.custom-task-modal .modal-content input[type="text"],
+.custom-task-modal .modal-content textarea,
+.custom-task-modal .modal-content select,
+.custom-task-modal .modal-content input[type="date"] {
+    /* Customize input fields */
+    width: 100%; /* Adjust this value as needed */
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.custom-task-modal .modal-content input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-task-modal .modal-content input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.custom-task-modal .close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}

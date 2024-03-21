@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <button id="addTaskBtn">Add Task</button>
+    </header>
+    <div id="taskFilters">
+        <label for="sortBy">Sort by:</label>
+        <select id="sortBy">
+            <option value="default">Default</option>
+            <option value="name">Name</option>
+            <option value="priority">Priority</option>
+            <option value="dueDate">Due Date</option>
+            <option value="status">Status</option>
+        </select>
+        <label for="filterStatus">Filter by Status:</label>
+        <select id="filterStatus">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+        </select>
+    </div>
+    <main>
+        <div id="taskList">
+            <!-- Tasks will be dynamically inserted here -->
+            <!-- Sample task with delete button -->
+            <div class="task">
+                <h3>Task Title</h3>
+                <p>Task description goes here...</p>
+                <button class="deleteTaskBtn">Delete</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for adding/editing tasks -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add Task</h2>
+            <form id="taskForm">
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" name="taskName" required>
+                <label for="taskDescription">Description:</label>
+                <textarea id="taskDescription" name="taskDescription"></textarea>
+                <label for="taskPriority">Priority:</label>
+                <select id="taskPriority" name="taskPriority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate" name="dueDate">
+                <label for="taskStatus">Status:</label>
+                <select id="taskStatus" name="taskStatus">
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <input type="submit" id="submitTaskBtn" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/add_task.js"></script>
+</body>
+</html>
