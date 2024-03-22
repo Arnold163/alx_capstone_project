@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Task 1",
+      "description": "Complete project proposal",
+      "priority": "high",
+      "due_date": "2024-04-15",
+      "status": "pending",
+      "assignee": "John Doe"
+    },
+    {
+      "title": "Task 2",
+      "description": "Review project requirements",
+      "priority": "medium",
+      "due_date": "2024-04-20",
+      "status": "pending",
+      "assignee": "Jane Smith"
+    },
+    {
+      "title": "Task 3",
+      "description": "Prepare presentation slides",
+      "priority": "low",
+      "due_date": "2024-04-25",
+      "status": "completed",
+      "assignee": "David Johnson"
+    }
+  ]

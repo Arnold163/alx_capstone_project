@@ -15,7 +15,7 @@
     </header>
     
     <main>
-        <form id="signupForm">
+        <form id="signupForm" action="/sign_up" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <label for="email">Email:</label>
@@ -23,12 +23,24 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <input type="submit" id="submitSignupBtn" value="Sign Up">
-            <button id="loginBtn" onclick="location.href='login.html';" type="button">Login</button>
         </form>
+        <button id="loginBtn" onclick="location.href='login.html';" type="button">Login</button>
     </main>
 
     <footer>
         <p>PressCane limited</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('signupForm').addEventListener('submit', function(event){
+                event.preventDefault(); // prevent default form submission 
+                // perform signup validation and registration 
+                // if signup is successful, redirect to login page
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+
 </body>
 </html>

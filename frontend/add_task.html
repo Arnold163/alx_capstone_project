@@ -12,6 +12,24 @@
             <img src="C:\Users\Arnold\alx_capstone_project\alx_capstone_project\images\logo.png" alt="logo">
         </div>
         <h1>Task Manager</h1>
+
+        <ul>
+            <li><button onclick="window.location.href='index.html'">Back to Task List</button></li>
+        </ul>
+        <ul>
+            <li><button onclick="logout()">Logout</button></li>
+        </ul>
+        
+        <script>
+            function logout() {
+                // Clear username from local storage
+                localStorage.removeItem('username');
+        
+                // Redirect to login page
+                window.location.href = 'login.html'; 
+            }
+        </script>
+        
     </header>
     
     <div id="taskFilters" class="custom-task-filters">
@@ -31,19 +49,16 @@
         </select>
     </div>
     <main class="custom-main">
-        <div id="taskList" class="custom-task-list">
-            <!-- Tasks will be dynamically inserted here -->
-            <!-- Sample task with delete button -->
-            <div class="task">
-                <h3>Task Title</h3>
-                <p>Task description goes here...</p>
-                <button class="deleteTaskBtn">Delete</button>
+        <div id="taskListContainer">
+            <div id="taskList" class="custom-task-list">
+                <!-- Tasks will be dynamically inserted here -->
             </div>
         </div>
     </main>
-    <button id="logoutBtn">Logout</button>
+    
     <button id="addTaskBtn">Add New Task</button>
     <button id="edit_taskBtn"><a href="edit_task.html">Edit Task</a></button>
+    
     <!-- Modal for adding/editing tasks -->
     <div id="taskModal" class="modal custom-task-modal">
         <div class="modal-content">

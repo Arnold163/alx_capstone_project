@@ -1,37 +1,31 @@
+// Define the users object with username-password pairs
+var users = {
+    'john': { password: 'password123', tasks: ['Task 1', 'Task 2'] },
+    'emma': { password: 'abcxyz', tasks: ['Task 3', 'Task 4'] }
+    // Add more users as needed
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     // Form submission handler
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
+
         // Get form inputs
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
 
-        // Send login request to server
-        fetch('http://localhost:5000/backend/login.py', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: username,
-                password: password
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Handle response from server
-            if (data.success) {
-                // Redirect to dashboard
-                window.location.href = 'index.html';
-            } else {
-                // Display error message 
-                alert('Login failed. Please check your credentials.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        // Dummy check for valid credentials
+        var userData = users[username];
+        if (userData && userData.password === password) {
+            // Store user data in session storage (password should not be stored)
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('tasks', JSON.stringify(userData.tasks)); // Store tasks
+
+            // Redirect to dashboard
+            window.location.href = 'index.html';
+        } else {
             // Display error message 
-            alert('An error occurred while processing your request. Please try again later.');
-        });
+            alert('Invalid username or password. Please try again.');
+        }
     });
 });
