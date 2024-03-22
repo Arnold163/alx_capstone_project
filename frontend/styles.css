@@ -113,16 +113,18 @@ footer {
 }
 
 .custom-task-list {
-    /* Add custom styles for the taskList div */
-    /* Add custom styles for the taskList div */
-    /* Add custom styles for the taskList div */
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 10px; /* Add some padding */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .custom-task-modal {
-    /* Adjust modal position */
+    
     top: 20%; /* Adjust this value as needed */
 
-    /* Add custom styles for the modal content */
+    
 }
 
 .custom-task-modal .modal-content {
@@ -282,9 +284,12 @@ footer {
 }
 
 .custom-task-list {
-    /* Add custom styles for the taskList div */
-    /* Add custom styles for the taskList div */
-    /* Add custom styles for the taskList div */
+    margin-bottom: 10px; /* Add space between tasks */
+    padding: 10px; /* Add padding inside each task */
+    background-color: #fff; /* White background for each task */
+    border: 1px solid #ddd; /* Add a border around each task */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .custom-task-modal {

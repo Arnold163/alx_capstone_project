@@ -21,7 +21,19 @@
         </div>
 
         <button id="addTaskBtn" onclick="location.href='add_task.html';">Add New Task</button>
-        <button id="logoutBtn">Logout</button>
+        <ul>
+            <li><button onclick="logout()">Logout</button></li>
+        </ul>
+        
+        <script>
+            function logout() {
+                // Clear username from local storage
+                localStorage.removeItem('username');
+        
+                // Redirect to login page
+                window.location.href = 'login.html'; 
+            }
+        </script>
     </main>
 
     <footer>

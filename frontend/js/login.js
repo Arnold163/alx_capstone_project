@@ -1,8 +1,10 @@
 // Define the users object with username-password pairs
 var users = {
     'john': { password: 'password123', tasks: ['Task 1', 'Task 2'] },
-    'emma': { password: 'abcxyz', tasks: ['Task 3', 'Task 4'] }
-    // Add more users as needed
+    'emma': { password: 'abcxyz', tasks: ['Task 3', 'Task 4'] },
+    'ichigo' : { password: 'yoda', tasks: ['Task 5', 'Task 6'] }
+
+    
 };
 
 document.addEventListener('DOMContentLoaded', function() {
